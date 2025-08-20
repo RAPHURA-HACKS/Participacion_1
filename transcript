@@ -1,0 +1,54 @@
+# Compile of _and.v failed with 1 errors.
+# Compile of _and.v was successful.
+vsim El_Tiburon._and
+# vsim El_Tiburon._and 
+# Start time: 10:34:44 on Aug 20,2025
+# Loading El_Tiburon._and
+add wave -position end  sim:/_and/a
+add wave -position end  sim:/_and/b
+add wave -position end  sim:/_and/c
+force -freeze sim:/_and/a 0 0
+force -freeze sim:/_and/b 0 0
+run
+force -freeze sim:/_and/b St1 0
+run
+force -freeze sim:/_and/b St0 0
+force -freeze sim:/_and/a St1 0
+run
+force -freeze sim:/_and/b St1 0
+run
+force -freeze sim:/_and/c 1 0
+run
+# Break key hit
+run
+add wave -position insertpoint  \
+sim:/_and/a
+add wave -position end  sim:/_and/b
+add wave -position end  sim:/_and/c
+add wave -position end  sim:/_and/a
+add wave -position end  sim:/_and/b
+add wave -position end  sim:/_and/c
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Break key hit
+# Break key hit
+# Break key hit
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+force -freeze sim:/_and/a 0 0
+force -freeze sim:/_and/b 1 0
+run
+force -freeze sim:/_and/a 1 0
+force -freeze sim:/_and/b 0 0
+force -freeze sim:/_and/c 0 0
+run
+force -freeze sim:/_and/a 1 0
+force -freeze sim:/_and/b 1 0
+force -freeze sim:/_and/c 1 0
+run
+# Project file E:/Modelsim/El_Tiburon.mpf is write protected, data cannot be saved.
+# Unable to save project.
+# End time: 15:44:25 on Aug 20,2025, Elapsed time: 5:09:41
+# Errors: 0, Warnings: 0
